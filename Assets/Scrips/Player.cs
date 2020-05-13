@@ -1,43 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
-    private int speed = 10;
+    public Camera cam;
+    private Rigidbody rb3d;
 
-    public Rigidbody rb;
-
-    private bool sphereIsOnTheGround = true;
-
-    // Start is called before the first frame update
+    public NavMeshAgent agent;
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        rb3d = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        float moveVertical = Input.GetAxis("Vertical") * Time.deltaTime * speed;
-
-        Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical);
-
-        rb.AddForce(movement * speed);
-
-        if (Input.GetKey(KeyCode.Space) && sphereIsOnTheGround)
+        if (Input.GetMouseButtonDown(0))
         {
-            rb.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
-            sphereIsOnTheGround = false;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if(Physics.Raycast(ray, out hit))
+            {
+                agent.SetDestination(hit.point);
+            }
         }
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            sphereIsOnTheGround = true;
+            Destroy(gameObject);
         }
     }
 }

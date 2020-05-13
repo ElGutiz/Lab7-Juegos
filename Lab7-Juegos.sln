@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponents", "NavMeshComponents.csproj", "{407BFAFD-330B-E863-0A53-016C574E4449}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E35B2A1F-B56C-B1D8-C874-9C8C0283ACA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NavMeshComponentsEditor", "NavMeshComponentsEditor.csproj", "{E9810792-CA37-E9B2-1229-601D46F9EB21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{407BFAFD-330B-E863-0A53-016C574E4449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407BFAFD-330B-E863-0A53-016C574E4449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407BFAFD-330B-E863-0A53-016C574E4449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407BFAFD-330B-E863-0A53-016C574E4449}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E35B2A1F-B56C-B1D8-C874-9C8C0283ACA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E35B2A1F-B56C-B1D8-C874-9C8C0283ACA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E35B2A1F-B56C-B1D8-C874-9C8C0283ACA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E35B2A1F-B56C-B1D8-C874-9C8C0283ACA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9810792-CA37-E9B2-1229-601D46F9EB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9810792-CA37-E9B2-1229-601D46F9EB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9810792-CA37-E9B2-1229-601D46F9EB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9810792-CA37-E9B2-1229-601D46F9EB21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
